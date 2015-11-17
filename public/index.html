@@ -1,0 +1,60 @@
+ <html ng-app="myapp">
+	<head>
+		<title>JSON to responsys</title>
+		<script src=js/angular.js></script>
+		<script src=js/angular-drag-and-drop-lists.js></script>
+		<script src=js/angular-route.min.js></script>
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src=js/dropdown.js></script>
+		<script src="https://code.angularjs.org/1.4.3/angular-resource.js"></script>
+		<script src=routes/routes.js></script>
+		<script src=routes/email/email.js></script>
+		<script src=routes/email/emailService.js></script>
+		<script src=routes/emailMenu/emailMenu.js></script>
+		<script src=routes/jsonInput/jsonInput.js></script>
+		<script src=routes/jsonItem/jsonItem.js></script>
+		<script src=routes/output/dataOutput.js></script>
+		<link rel="stylesheet" href="style.css"/>
+		<link rel="stylesheet" href="bootstrap/bootstrap.min.css"/>
+	</head>
+	<body ng-controller="EmailController">
+	
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		 <div class="container">
+		   <div class="navbar-header">
+			   <div class="navbar-brand">JSON formatter to responsys</div>
+		   </div> 
+		 </div>
+		</nav>
+
+		<div class="jumbotron">
+		 <div class="container">
+		   <h2>
+			   <span class="glyphicon glyphicon-edit"></span>
+			   Responsys requrements creator from structured JSON
+		   </h2>
+		   <p>			   
+		   </p>
+		 </div>
+		</div>
+
+		<div class="container" ng-controller="EmailMenu">
+			<ul class="nav nav-tabs">
+			  <li role="presentation" class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#/" role="button" aria-haspopup="true" aria-expanded="false">Select email <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#/email/new">Create new</a></li>
+					<li role=separator class=divider></li>
+					<li ng-repeat="v in emails"><a href="#/email/{{v.emailName}}">{{v.emailName}}</a></li>
+				</ul>
+			  </li>
+			  <li role="presentation"><a href="#/item">Items</a></li>
+			  <li role="presentation"><a href="#/jsonOutput">Json Output</a></li>
+			  <li role="presentation"><a href="#/xlsOutput">Xls Output</a></li>
+			  <li role="presentation"><a href="#/mapOutput">Map Output</a></li>
+			</ul><br>
+			<div class="container" ng-view></div>	
+		</div>
+		
+	</body>
+ </html>

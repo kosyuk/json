@@ -1,0 +1,3 @@
+module.controller('EmailController', function() {
+	
+});

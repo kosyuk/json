@@ -1,0 +1,28 @@
+.note{
+	background-color:#EEE;
+	padding:5px;
+	width:80%;
+	border:1px solid black;
+	margin:10px;
+}
+.pad1{
+	padding-left:5;
+}
+.pad2{
+	padding-left:20;
+}
+.pad3{
+	padding-left:40;
+}
+.pad4{
+	padding-left:50;
+}
+.pad5{
+	padding-left:60;
+}
+.pad5{
+	padding-left:70;
+}
+.itemDesc{
+	color:#888;
+}

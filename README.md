@@ -19,3 +19,6 @@ node server.js
 
 4) Open in your browser
 http://localhost:3000
+
+
+Working project: http://jsonformatter.kosyuk.com:3010/
